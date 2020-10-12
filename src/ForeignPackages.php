@@ -15,7 +15,7 @@ namespace Proximify;
 class ForeignPackages extends CLIActions
 {
     /** @var string Path to the package URL settings. */
-    public const PKG_URL_PATH = 'settings/foreign-packages.json';
+    public const PKG_URL_PATH = 'settings/ForeignPackages.json';
 
     /**
      * Occurs after the install command has been executed with a 
