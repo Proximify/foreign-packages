@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "266419e6adb6a7fbfe29448c0d073d77",
+    "packages": [
+        {
+            "name": "proximify/cli-actions",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "/Users/Proximify/cli-actions",
+                "reference": "87a19697e0e90cb4ad51f5fbd7fa8994d4bde23c"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Proximify\\": "src"
+                }
+            },
+            "scripts": {
+                "app:dummyAction": [
+                    "Proximify\\CLIActions::auto"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Proximify Inc",
+                    "email": "support@proximify.ca"
+                }
+            ],
+            "description": "Command-line interface (CLI) with custom actions and interactive prompts (e.g. composer app:action argument).",
+            "transport-options": {
+                "symlink": true
+            }
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "proximify/cli-actions": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
