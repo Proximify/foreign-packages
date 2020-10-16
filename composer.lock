@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "266419e6adb6a7fbfe29448c0d073d77",
+    "content-hash": "dd7971471315b29d1040f4ddd28ef0d2",
     "packages": [
         {
             "name": "proximify/cli-actions",
-            "version": "dev-master",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Proximify/cli-actions.git",
+                "reference": "77b880088f7fb03b7439c1e307f10ccb72b4ff77"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/Proximify/cli-actions",
-                "reference": "87a19697e0e90cb4ad51f5fbd7fa8994d4bde23c"
+                "type": "zip",
+                "url": "https://api.github.com/repos/Proximify/cli-actions/zipball/77b880088f7fb03b7439c1e307f10ccb72b4ff77",
+                "reference": "77b880088f7fb03b7439c1e307f10ccb72b4ff77",
+                "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
@@ -23,11 +29,7 @@
                     "Proximify\\": "src"
                 }
             },
-            "scripts": {
-                "app:dummyAction": [
-                    "Proximify\\CLIActions::auto"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -38,19 +40,16 @@
                 }
             ],
             "description": "Command-line interface (CLI) with custom actions and interactive prompts (e.g. composer app:action argument).",
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2020-10-15T21:30:03+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "proximify/cli-actions": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

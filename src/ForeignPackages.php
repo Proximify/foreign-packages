@@ -18,7 +18,7 @@ class ForeignPackages extends CLIActions
     public const PKG_URL_PATH = 'settings/ForeignPackages.json';
 
     /**
-     * Occurs after the install command has been executed with a 
+     * Occurs after the install command has been executed with a
      * lock file present.
      *
      * @param array $options CLI options.
@@ -30,7 +30,7 @@ class ForeignPackages extends CLIActions
     }
 
     /**
-     * Occurs after the update command has been executed, or after the 
+     * Occurs after the update command has been executed, or after the
      * install command has been executed without a lock file present.
      *
      * @param array $options CLI options.
@@ -85,6 +85,19 @@ class ForeignPackages extends CLIActions
         ];
 
         return $out;
+    }
+
+    /**
+     * Find the path to an app.
+     *
+     * @param string $app
+     * @return string|null
+     */
+    public static function findApp(string $app): ?string
+    {
+        $status = self::execute("which $app", getcwd());
+
+        return (!$status['code']) ? $status['out'] : null;
     }
 
     /**
@@ -172,18 +185,5 @@ class ForeignPackages extends CLIActions
         }
 
         return $valid;
-    }
-
-    /**
-     * Find the path to an app.
-     *
-     * @param string $app
-     * @return string|null
-     */
-    private static function findApp(string $app): ?string
-    {
-        $status = self::execute("which $app", getcwd());
-
-        return (!$status['code']) ? $status['out'] : null;
     }
 }
