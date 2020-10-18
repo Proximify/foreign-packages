@@ -18,38 +18,20 @@ class ForeignPackages extends CLIActions
     public const PKG_URL_PATH = 'settings/ForeignPackages.json';
 
     /**
-     * Occurs after the install command has been executed with a
-     * lock file present.
-     *
-     * @param array $options CLI options.
-     * @return void
+     * @inheritDoc
      */
-    public function postInstallCmd(array $options): void
+    public function runComposerAction(array $options): void
     {
-        $this->processPackages('install', $options);
-    }
+        $env = $options[self::ENV_OPTIONS];
+        $map = [
+            'post-create-project-cmd' => 'install',
+            'post-install-cmd' => 'install',
+            'post-update-cmd' => 'update'
+        ];
 
-    /**
-     * Occurs after the update command has been executed, or after the
-     * install command has been executed without a lock file present.
-     *
-     * @param array $options CLI options.
-     * @return void
-     */
-    public function postUpdateCmd(array $options): void
-    {
-        $this->processPackages('update', $options);
-    }
-
-    /**
-     * Occurs after the create-project command has been executed.
-     *
-     * @param array $options CLI options.
-     * @return void
-     */
-    public function postCreateProjectCmd(array $options): void
-    {
-        $this->processPackages('install', $options);
+        if ($action = $map[$env['action']] ?? false) {
+            $this->processPackages($action, $options);
+        }
     }
 
     /**

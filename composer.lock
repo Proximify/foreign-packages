@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd7971471315b29d1040f4ddd28ef0d2",
+    "content-hash": "caffc2ecff2eefde37b98a2d91d0f40a",
     "packages": [
         {
             "name": "proximify/cli-actions",
-            "version": "1.0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Proximify/cli-actions.git",
-                "reference": "70fe42c6efa980a91efcde1a0e8476fb36e73000"
+                "reference": "394484d841bcfb7f918b68299215e024201e73d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Proximify/cli-actions/zipball/70fe42c6efa980a91efcde1a0e8476fb36e73000",
-                "reference": "70fe42c6efa980a91efcde1a0e8476fb36e73000",
+                "url": "https://api.github.com/repos/Proximify/cli-actions/zipball/394484d841bcfb7f918b68299215e024201e73d2",
+                "reference": "394484d841bcfb7f918b68299215e024201e73d2",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Command-line interface (CLI) with custom actions and interactive prompts (e.g. composer app:action argument).",
-            "time": "2020-10-17T22:18:50+00:00"
+            "time": "2020-10-18T02:31:50+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -263,7 +263,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "proximify/cli-actions": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
